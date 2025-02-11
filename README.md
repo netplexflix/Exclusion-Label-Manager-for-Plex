@@ -1,4 +1,4 @@
-# Exclusion Label Manager for Plex
+# 🏷️ Exclusion Label Manager for Plex
 
 This script adds or removes Exclusion Labels on your Plex users level.
 
