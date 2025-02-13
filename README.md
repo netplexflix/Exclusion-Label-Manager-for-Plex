@@ -1,6 +1,6 @@
-# 🏷️ Exclusion Label Manager for Plex
+# 🏷️ User Restrictions Label Manager for Plex
 
-This script adds or removes Exclusion Labels on your Plex users level.
+This script adds or removes Restriction Labels on your Plex users level.
 
 **Example use case:**</br>
 Say you want to create collections you only want visible to specific user(s), you can give the collection a label and then add that label to every other user's "Exclude Labels".
@@ -12,11 +12,14 @@ Originally made to be used with [Movie Recommendations for Plex](https://github.
 ---
 
 ## ✨ Features
-- ⚡ **Bulk Operation**: Quickly Add desired exclusion label to all users
-- 🗑️ **Quick Removal**: Quickly remove exclusion label from all users
-- 🏛️ **Library Selection**: Choose Movies, TV Shows or both
-- 🙅🏻 **Exclusion**: Skip specific users
-- 🅰️ **Case insensitive**: Case-insensitive username handling
+- ℹ️ **GET:** Gives a report of all current labels for each user
+- ➕ **ADD:** Adds desired labels to all users
+- ➖ **REMOVE:** Removes desired labels from all users
+- ⚡ **Bulk Operation:** Quickly applies changes to large userlists
+- 🙅🏻 **Exclusion:** Skip specific users
+- 🏛️ **Library Selection:** Choose Movies, TV Shows or both
+- ☑ **Allow or Exclude:** Choose whether to apply the label to Allowed or Excluded
+- 🅰️ **Case insensitive:** Case-insensitive username handling
 
 ---
 
@@ -25,8 +28,8 @@ Originally made to be used with [Movie Recommendations for Plex](https://github.
 ### 1️⃣ Download the script
 Clone the repository:
 ```sh
-git clone https://github.com/netplexflix/Exclusion-Label-Manager-for-Plex.git
-cd Exclusion-Label-Manager-for-Plex
+git clone https://github.com/netplexflix/User-Restrictions-Label-Manager-for-Plex.git
+cd User-Restrictions-Label-Manager-for-Plex
 ```
 
 ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) Or simply download by pressing the green 'Code' button above and then 'Download Zip'.
@@ -36,7 +39,7 @@ cd Exclusion-Label-Manager-for-Plex
 - Open a Terminal in the script's directory
 >[!TIP]
 >Windows Users: <br/>
->Go to the script folder (where ELMP.py is).</br>
+>Go to the script folder (where URLMP.py is).</br>
 >Right mouse click on an empty space in the folder and click `Open in Windows Terminal`
 - Install the required dependencies:
 ```sh
@@ -46,7 +49,7 @@ pip install -r requirements.txt
 ---
 
 ## ⚙️ Configuration
-- Open `ELMP.py` in a text editor
+- Open `URLMP.py` in a text editor
 - Replace `YOUR_PLEX_TOKEN` with your [Plex Token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)
 - Save
 
@@ -56,20 +59,22 @@ pip install -r requirements.txt
 
 Run the script with:
 ```sh
-python ELMP.py
+python URLMP.py
 ```
 
 The script will now ask you
-1. If you want to ADD or REMOVE exclusion labels
-2. which user(s) to skip. e.g.: `user1, user2, user3`
-3. Which section to apply the exclusion to. `1` for Movies, `2` for TV Shows (type `1,2` for both)
+1. If you want to ADD, REMOVE or GET labels
+2. Which label to apply
+3. Whether to apply it to Allowed or Excluded labels
+4. Which user(s) to skip. e.g.: `user1, user2, user3`
+5. Which section to apply the exclusion to. `1` for Movies, `2` for TV Shows (type `1,2` for both)
    
-![Image](https://github.com/user-attachments/assets/6361b894-d0eb-4efa-986e-fdd4bd99bffd)
+![Image](https://github.com/user-attachments/assets/67e0ed82-2bd8-4847-9d85-70b3a8144fa1)
 
 > [!TIP]
 > Windows users can create a batch file for quick launching:
 > ```batch
-> "C:\Path\To\Python\python.exe" "Path\To\Script\ELMP.py"
+> "C:\Path\To\Python\python.exe" "Path\To\Script\URLMP.py"
 > pause
 > ```
 
@@ -99,7 +104,7 @@ The script will now ask you
 ---
 
 ### ⚠️ Need Help or have Feedback?
-- Open an [Issue](https://github.com/netplexflix/Exclusion-Label-Manager-for-Plex/issues) on GitHub
+- Open an [Issue](https://github.com/netplexflix/User-Restrictions-Label-Manager-for-Plex/issues) on GitHub
 - Join our [Discord](https://discord.gg/VBNUJd7tx3)
 
 ---
